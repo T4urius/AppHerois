@@ -11,8 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DbConnection"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DbConnection"));    
 });
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 var app = builder.Build();
 

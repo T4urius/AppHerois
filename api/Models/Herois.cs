@@ -18,7 +18,7 @@ namespace api.Models
         public string? NomeHeroi { get; set; }
 
         [Column("datanascimento")]
-        public DateTime DataNascimento { get; set; }
+        public DateTime DataNascimento { get; set; } 
 
         [Column("altura")]
         public float Altura { get; set; }

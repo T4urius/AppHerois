@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Matheus\\Documents\\Super Heroi Matheus\\api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3D7C60-EE07-4984-9787-C2B3C73E991F}|api.csproj|c:\\users\\matheus\\documents\\super heroi matheus\\api\\controllers\\heroiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C3D7C60-EE07-4984-9787-C2B3C73E991F}|api.csproj|solutionrelative:controllers\\heroiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3D7C60-EE07-4984-9787-C2B3C73E991F}|api.csproj|c:\\users\\matheus\\documents\\super heroi matheus\\api\\models\\herois.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C3D7C60-EE07-4984-9787-C2B3C73E991F}|api.csproj|solutionrelative:models\\herois.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C3D7C60-EE07-4984-9787-C2B3C73E991F}|api.csproj|c:\\users\\matheus\\documents\\super heroi matheus\\api\\models\\superpoderes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C3D7C60-EE07-4984-9787-C2B3C73E991F}|api.csproj|solutionrelative:models\\superpoderes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Herois.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus\\Documents\\Super Heroi Matheus\\api\\Models\\Herois.cs",
+              "RelativeDocumentMoniker": "Models\\Herois.cs",
+              "ToolTip": "C:\\Users\\Matheus\\Documents\\Super Heroi Matheus\\api\\Models\\Herois.cs",
+              "RelativeToolTip": "Models\\Herois.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T05:44:35.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Superpoderes.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus\\Documents\\Super Heroi Matheus\\api\\Models\\Superpoderes.cs",
+              "RelativeDocumentMoniker": "Models\\Superpoderes.cs",
+              "ToolTip": "C:\\Users\\Matheus\\Documents\\Super Heroi Matheus\\api\\Models\\Superpoderes.cs",
+              "RelativeToolTip": "Models\\Superpoderes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T05:41:48.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HeroisController.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus\\Documents\\Super Heroi Matheus\\api\\Controllers\\HeroisController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HeroisController.cs",
+              "ToolTip": "C:\\Users\\Matheus\\Documents\\Super Heroi Matheus\\api\\Controllers\\HeroisController.cs",
+              "RelativeToolTip": "Controllers\\HeroisController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T04:58:58.376Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

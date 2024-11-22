@@ -31,6 +31,8 @@ alter table herois_superpoderes
     add constraint fk2_herois_superpoderes
     foreign key (SuperpoderId) 
     REFERENCES super_poderes (Id);
+
+ALTER TABLE herois ADD CONSTRAINT uk_herois UNIQUE (nomeheroi);
     
    select * from herois;
    select * from super_poderes;

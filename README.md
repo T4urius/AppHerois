@@ -33,3 +33,7 @@ alter table herois_superpoderes
     REFERENCES super_poderes (Id);
 
 ALTER TABLE herois ADD CONSTRAINT uk_herois UNIQUE (nomeheroi);
+
+insert into super_poderes(superpoder, descricao) values 
+('Teia', 'Joga teia'),
+('Sensor aranha', 'Sente o perigo');

@@ -9,5 +9,6 @@ namespace api.Data
 
         public DbSet<Herois> Herois { get; set; }
         public DbSet<Superpoderes> Superpoderes { get; set; }
+        public DbSet<Herois_Superpoderes> HeroisSuperPoderes { get; set; }
     }
 }

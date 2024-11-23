@@ -2,29 +2,35 @@
     <div class="mb-3">
         <label>Nome</label>
         <input class="form-control form-control-lg" name="nome" 
-        #nome="ngModel" [(ngModel)]="service.formData.nome">
+        #nome="ngModel" [(ngModel)]="service.formData.nome" required>
     </div>
     <div class="mb-3">
         <label>Nome do Herói</label>
         <input class="form-control form-control-lg" name="nomeHeroi"  
-        #nomeHeroi="ngModel" [(ngModel)]="service.formData.nomeHeroi">
+        #nomeHeroi="ngModel" [(ngModel)]="service.formData.nomeHeroi" required>
     </div>
     <div class="mb-3">
         <label>Data Nascimento</label>
         <input type="date" class="form-control form-control-lg" name="dataNascimento"
-        #dataNascimento="ngModel" [(ngModel)]="service.formData.dataNascimento">
+        #dataNascimento="ngModel" [(ngModel)]="service.formData.dataNascimento">        
     </div>
     <div class="mb-3">
         <label>Altura</label>
-        <input class="form-control form-control-lg" placeholder="Altura" name="altura"
-        #altura="ngModel" [(ngModel)]="service.formData.altura">
+        <input class="form-control form-control-lg" type="number" placeholder="Altura" name="altura"
+        #altura="ngModel" [(ngModel)]="service.formData.altura" required>
     </div>
     <div class="mb-3">
         <label>Peso</label>
-        <input class="form-control form-control-lg" placeholder="dd/mm/yyyy" name="peso"
-        #peso="ngModel" [(ngModel)]="service.formData.peso">
+        <input class="form-control form-control-lg" type="number" placeholder="Peso" name="peso"
+        #peso="ngModel" [(ngModel)]="service.formData.peso" required>
     </div>
+    <div class="form-group">
+        <label for="college">Superpoder:</label>
+        <select class="form-control" id="college" [(ngModel)]="idsuperpoder" name="superpoder" required>
+          <option *ngFor="let sp of superpoderService.list" value="{{sp.id}}">{{sp.superpoder}}</option>
+        </select>
+   </div><br>
     <div class="d-grid">
-        <button class="btn btn-lg btn-success" type="submit">Cadastrar</button>
+        <button class="btn btn-lg btn-success" type="submit">Registrar</button>
     </div>
 </form>

@@ -7,14 +7,22 @@
     </div>
     <div class="col-6">
         <h4>Lista dos Heróis</h4>
+        <label>Pesquise pelo código</label>
+        <div class="d-flex justify-content-between">
+            <input class="form-control form-control-lg" type="number" [(ngModel)]="idPesquisa">&nbsp;       
+            <span class="text-secondary align-content-center">
+                <i class="fa-solid fa-search fa-lg mouse-hover" (click)="pesquisar()"></i>
+            </span>
+        </div><br>
         <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py.3 rounded-3" *ngFor="let pd of service.list">
-                <div class="flex-grow-1 mouse-hover">
+            <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py.3 rounded-3" *ngFor="let pd of heroisService.list">
+                <div class="flex-grow-1 mouse-hover" (click)="selecionarLinha(pd)">
+                    <div><label>Código: </label> {{pd.id}}</div>
                     <div>{{pd.nome}}</div>
                     <div class="fw-bold">{{pd.nomeHeroi}}</div>
                 </div>
                 <span class="text-secondary">
-                    <i class="fa-solid fa-trash-can fa-lg mouse-hover"></i>
+                    <i class="fa-solid fa-trash-can fa-lg mouse-hover" (click)="onDelete(pd.id)"></i>
                 </span>
             </li>
         </ul>

@@ -7,6 +7,8 @@ import { HeroisDetalhesComponent } from './herois-detalhes/herois-detalhes.compo
 import { FrmheroisDetalhesComponent } from './herois-detalhes/frmherois-detalhes/frmherois-detalhes.component';
 import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,12 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-right'
+    })
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

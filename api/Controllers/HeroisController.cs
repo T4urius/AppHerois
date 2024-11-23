@@ -27,7 +27,7 @@ namespace api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create([FromBody] Herois herois)
+        public async Task<ActionResult<Herois>> Create([FromBody] Herois herois)
         {
             if (string.IsNullOrWhiteSpace(herois.Nome) ||
                 string.IsNullOrWhiteSpace(herois.NomeHeroi) ||
@@ -36,20 +36,20 @@ namespace api.Controllers
             {
                 return BadRequest("Invalid Request");
             }
+
+            var heroisSuperpoderes = new Herois_Superpoderes() { SuperpoderId = herois.Idsuperpoder.GetValueOrDefault(), HeroiId = herois.Id };
+
+            await _dbContext.HeroisSuperPoderes.AddAsync(heroisSuperpoderes);
             await _dbContext.Herois.AddAsync(herois);
             await _dbContext.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetById), new {id = herois.Id }, herois);
         }
 
-        [HttpPut]
-        public async Task<ActionResult> Update([FromBody] Herois herois)
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Herois>> Update(int id, Herois herois)
         {
-            if (herois.Id == 0 ||
-                string.IsNullOrWhiteSpace(herois.Nome) ||
-                string.IsNullOrWhiteSpace(herois.NomeHeroi) ||
-                string.IsNullOrWhiteSpace(herois.Altura.ToString()) ||
-                string.IsNullOrWhiteSpace(herois.Peso.ToString()))
+            if (id != herois.Id)
             {
                 return BadRequest("Invalid Request");
             }
@@ -57,22 +57,26 @@ namespace api.Controllers
             _dbContext.Herois.Update(herois);
             await _dbContext.SaveChangesAsync();
 
-            return Ok();
+            return Ok(await _dbContext.Herois.ToListAsync());
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var herois = await GetById(id);
-            if (herois == null)
+            if (_dbContext.Herois == null)
+            {
+                return NotFound();
+            }
+            var paymentDetail = await _dbContext.Herois.FindAsync(id);
+            if (paymentDetail == null)
             {
                 return NotFound();
             }
 
-            _dbContext.Herois.Remove(herois);
+            _dbContext.Herois.Remove(paymentDetail);
             await _dbContext.SaveChangesAsync();
 
-            return Ok();
+            return Ok(await _dbContext.Herois.ToListAsync());
         }
     }
 }

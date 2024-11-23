@@ -5,4 +5,5 @@ export class HeroisDetalhe {
     dataNascimento: Date = new Date
     altura: number = 0
     peso: number = 0
+    idsuperpoder: number = 0
   }

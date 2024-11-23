@@ -3,15 +3,16 @@ import { HttpClient } from "@angular/common/http";
 import { environment } from '../../environments/environment.development';
 import { HeroisDetalhe } from './herois-detalhe.model';
 import { NgForm } from '@angular/forms';
+import { SuperpoderDetalhe } from './superpoder-detalhe.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HeroisDetalhesService {
+export class SuperpoderDetalhesService {
 
-  url: string = environment.apiBaseUrl + '/Herois'
-  list: HeroisDetalhe[] = []
-  formData : HeroisDetalhe = new HeroisDetalhe()
+  url: string = environment.apiBaseUrl + '/Superpoderes'
+  list: SuperpoderDetalhe[] = []
+  formData : SuperpoderDetalhe = new SuperpoderDetalhe()
 
   constructor(private http: HttpClient) { }
 
@@ -19,30 +20,30 @@ export class HeroisDetalhesService {
     this.http.get(this.url)
       .subscribe({
         next: res => {
-          this.list = res as HeroisDetalhe[]
+          this.list = res as SuperpoderDetalhe[]
         },
         error: err => { console.log(err)}
       })
   }
 
-  postHeroisDetalhes() {
+  postSuperpoderDetalhes() {
     return this.http.post(this.url,this.formData)
   }
 
-  putHeroisDetalhes() {
+  putSuperpoderDetalhes() {
     return this.http.put(this.url + '/' + this.formData.id, this.formData)
   }
 
-  searchHeroisDetalhesById(id: number) {
+  searchSuperpoderDetalhesById(id: number) {
     return this.http.get(this.url + '/' + id)
   }
 
-  deleteHeroisDetalhes(id: number) {
+  deleteSuperpoderDetalhes(id: number) {
     return this.http.delete(this.url + '/' + id)
   }
 
   resetForm(form:NgForm) {
     form.form.reset()
-    this.formData = new HeroisDetalhe()
+    this.formData = new SuperpoderDetalhe()
   }
 }

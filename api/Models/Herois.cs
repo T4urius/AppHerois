@@ -25,5 +25,8 @@ namespace api.Models
 
         [Column("peso")]
         public float Peso { get; set; }
+
+        [NotMapped]
+        public int? Idsuperpoder { get; set; }
     }
 }
